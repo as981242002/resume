@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2015/05/25 An elegant Résumé class]
-\LoadClass[10pt]{article}
+\LoadClass[11pt]{article}
 
 % disable indent globally
 \setlength{\parindent}{0pt}
@@ -8,10 +8,9 @@
 \RequirePackage{xltxtra}
 % use xifthen
 \RequirePackage{xifthen}
-% use progress bar for skill
-\RequirePackage{progressbar}
 % use hyperlink for email and url
 \RequirePackage{hyperref}
+\hypersetup{hidelinks}
 \RequirePackage{url}
 \urlstyle{tt}
 % use fontawesome
@@ -21,17 +20,22 @@
 % loading fonts
 \RequirePackage{fontspec}
 % Main document font
-%% \setmainfont[
-%%   SmallCapsFont = Fontin-SmallCaps
-%% ]{Sarasa Gothic SC}
-\urlstyle{same}
+\setmainfont[
+  Path = fonts/Main/ ,
+  Extension = .otf ,
+  UprightFont = *-regular ,
+  BoldFont = *-bold ,
+  ItalicFont = *-italic ,
+  BoldItalicFont = *-bolditalic ,
+  SmallCapsFont = Fontin-SmallCaps
+]{texgyretermes}
 
 \RequirePackage[
 	a4paper,
-	left=0.65in,
-	right=0.65in,
-	top=0.75in,
-	bottom=0.75in,
+	left=0.8in,
+	right=0.8in,
+	top=0.70in,
+	bottom=0.55in,
 	nohead
 ]{geometry}
 
@@ -39,8 +43,8 @@
 \RequirePackage{enumitem}
 \setlist{noitemsep} % removes spacing from items but leaves space around the whole list
 %\setlist{nosep} % removes all vertical spacing within and around the list
-\setlist[itemize]{topsep=0.15em, leftmargin=1.25pc}
-\setlist[enumerate]{topsep=0.15em, leftmargin=1.25pc}
+\setlist[itemize]{topsep=0.25em, leftmargin=1.5pc}
+\setlist[enumerate]{topsep=0.25em, leftmargin=1.5pc}
 \RequirePackage[super]{nth}
 
 \titleformat{\section}         % Customise the \section command 
@@ -49,13 +53,13 @@
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
   [\titlerule]                 % Inserts a horizontal line after the heading
-\titlespacing*{\section}{0cm}{*1.2}{*1.2}
+\titlespacing*{\section}{0cm}{*1.8}{*1.8}
 
 \titleformat{\subsection}
   {\large\raggedright}
   {}{0em}
   {}
-\titlespacing*{\subsection}{0cm}{*1.2}{*0.6}
+\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
 
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
@@ -90,6 +94,10 @@
   \ifthenelse{\isempty{#1}}%
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
+\newcommand{\linkedinsquare}[2][]{\faLinkedinSquare\ 
+  \ifthenelse{\isempty{#1}}%
+    {\href{#2}{#2}}
+    {\href{#2}{#1}}}
 % defines one's GitHub
 % usage: \github{<github>}
 \newcommand{\github}[2][]{\faGithub\ 
@@ -103,18 +111,12 @@
     {\href{#2}{#2}}
     {\href{#2}{#1}}}
 
-% defines progress bar with text
-% usage: \pbar[3][width]{Text}{percentage}
-\newcommand{\pbar}[3][10em]{{#2}\ 
-  \progressbar[heightr=1, width=#1, borderwidth=0pt, roundnessr=0.45, filledcolor=green!40, subdivisions=1]{#3}
-}
-
 \newcommand{\basicInfo}[1]{
   \centerline{\sffamily\large{#1}}
-  \vspace{0.25ex}
+  \vspace{1.5ex}
 }
 
 \newcommand{\role}[2]{
   {\par \textit{#1} ~ #2 \par}
+  \vspace{0.85ex}
 }
-

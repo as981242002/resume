@@ -1,0 +1,103 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{NotoSansSC_external}
+% \usepackage{NotoSerifCJKsc_external}
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{谭平}
+
+\basicInfo{
+  \email{875229565.com} \textperiodcentered\
+  \phone{(+86) 176-8878-4399} \textperiodcentered\  
+  \github [Away]{https://github.com/as981242002}
+}
+
+\section{\faInfo\ 求职意向}
+\begin{itemize}[parsep=0.25ex]
+  \item C++开发工程师/后台开发工程师
+\end{itemize}
+
+\section{\faGraduationCap\ 教育经历}
+\datedsubsection{\textbf{湘潭大学}, 湖南, 湘潭}{2013 -- 2017}
+\textit{学士}\ 电子信息工程
+
+\section{\faUsers\ 工作经历}
+\datedsubsection{\textbf{金蝶中国} 深圳}{2017年7月 -- 至今}
+\role{全职}{软件开发工程师}
+\begin{itemize}
+  \item 参与新项目的技术预研工作
+  \item 根据需求规格说明书及架构文档开展设计工作
+  \item 根据设计文档、开发规范进行模块的编码工作，修复BUG
+\end{itemize}
+
+\datedsubsection{\textbf{智能制造数字化工厂}}{2018年3月 -- 至今}
+\role{C\#、JavaScript、MySQL}{主要项目}
+\begin{onehalfspacing}
+金蝶工业互联网平台
+\begin{itemize}
+  \item 该项目是通过ERP和MES系统的协同，进行生产制造的自动化、智能化，建立数字化车间，实现精益生产和智能制造
+  \item 项目期间参与了语音识别和数据采集、计划核准平台等子项目，主要负责ERP和WEB后台中的设计和实现
+  \item 实现了一个基于LRU算法的高速缓存结构，提高了约20\%的系统性能
+  \item 负责数据清洗和可视化，展示在预期内的供需关系
+  \item 该项目获得了“创·中国工业互联网技术创新项目”铜奖
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{ViaC语言编译器}}{\url{https://github.com/as981242002/ViaC}}
+\role{C、C\#}{个人项目}
+\begin{onehalfspacing}
+Windows平台上的类C语言编译器，兼容大部分的C89
+\begin{itemize}
+  \item 支持指针、四则运算、sizeof等运算符
+  \item 支持原生C函数调用，兼容大部分的C89
+  \item 有完整的链接器，支持Windows下一键编译运行
+  \item 用WinForm实现了一个适配的编辑器,支持关键词智能联想
+\end{itemize}
+\end{onehalfspacing}
+
+
+% Reference Test
+%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
+%An xxx optimized for xxx\cite{verma2015large}
+%\begin{itemize}
+%  \item main contribution
+%\end{itemize}
+
+\section{\faCogs\ 技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 熟练运用C/C++(以及C++1X)、C\#，了解Shell、JavaScript、Go(学习中)、Lua等编程语言
+  \item 熟悉Windows、Unix/Linux等系统，熟悉Git、CMake、GDB等常用开发工具，
+	   熟悉Visual Studio、Visual Code、Qt Creator等开发环境
+  \item 熟悉常见的数据结构与算法，熟悉STL等标准库
+  \item 熟悉SQL Server、MySQL等关系数据库，了解Redis等NoSQL
+  \item 了解TCP/IP协议及进程间通信相关知识
+  \item 熟悉Unity3D游戏引擎，略知DirectX图形知识
+  \item 了解一些嵌入式平台下的编程，如STM32、51单片机
+\end{itemize}
+
+
+\section{\faInfo\ 其他}
+\begin{itemize}[parsep=0.25ex]
+  \item 崇尚技术、热爱学习。除了日常在Reddit 、Stack Overflow、知乎、segmentfault等社区关注业界的前沿动向外，
+	   还阅读了大量的技术书籍及博客，以及STL、部分muduo等开源库源码。
+  \item 兴趣广泛，喜好众多。工作以外，喜欢阅读、爬山、跑步、足球及电子游戏
+  \item 做一些手游和局域网端游
+  \item 牛客主页： \url{https://www.nowcoder.com/profile/971265}
+  \item GitHub: \url{https://github.com/as981242002}
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
